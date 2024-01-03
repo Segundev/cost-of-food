@@ -14,13 +14,15 @@
 
 <style>
 	.page-wrapper {
-		max-width: 390px;
+		width: 95%;
+		max-width: 750px;
 		margin: 0 auto;
+		overflow-x: hidden;
 	}
 
-	@media (min-width: 650px) {
+	/* @media (min-width: 650px) {
 		.page-wrapper {
-			max-width: 550px;
+			width: 50%;
 		}
-	}
+	} */
 </style>

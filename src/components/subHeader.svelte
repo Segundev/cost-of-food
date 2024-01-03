@@ -17,6 +17,8 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: 8px;
+		margin-top: 1rem;
+		margin-bottom: -1rem;
 		margin-left: 1.875rem;
 	}
 
@@ -37,7 +39,7 @@
 	}
 
 	.text {
-		font-size: 1rem;
+		font-size: 1.25rem;
 		font-weight: bold;
 		word-wrap: break-word;
 		margin: 0;
