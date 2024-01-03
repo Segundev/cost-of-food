@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Caladea:wght@700&family=Pragati+Narrow&display=swap');
+
+:root {
+	/* fonts size */
+	--base-size: 1rem;
+	--scale: 1.25;
+	--h1: calc(var(--h2) * var(--scale));
+	--h2: calc(var(--h3) * var(--scale));
+	--h3: calc(var(--h4) * var(--scale));
+	--h4: calc(var(--h5) * var(--scale));
+	--h5: calc(var(--h6) * var(--scale));
+	--h6: var(--base-size);
+
+	/* font family */
+	--sans-serif: 'Archivo', sans-serif;
+	--serif: 'Caladea', serif;
+	--mono: 'Pragati Narrow', sans-serif;
+
+	/* Color Pallete */
+	--lime: #3f5335;
+	--amber: #dea755;
+	--white: #ffffff;
+	--red: #ffbea5;
+}
+
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: var(--lime);
+	font-family: var(--sans-serif);
+	font-size: var(--base-size);
+	font-weight: 400;
+	line-height: 185%;
+	color: var(--white);
+	margin: 0px;
+}
+
+img {
+	margin: 0px;
+	font-size: 1rem;
+}
+
+p {
+	margin: 1.875rem 1.75rem;
+	font-size: 1rem;
+	line-height: 185%;
+	letter-spacing: 0.16px;
+	word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+h1 {
+	font-family: var(--serif);
+	line-height: 125%;
+	font-size: 2.45rem;
+	color: var(--amber);
+	text-align: center;
+	word-wrap: break-word;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: var(--h2);
+	color: var(--amber);
+}
+
+h3 {
+	font-size: var(--h3);
+}
+
+h4 {
+	font-size: var(--h4);
+}
+
+h5 {
+	font-size: var(--h5);
+}
+
+small,
+.text_small {
+	font-size: var(--h6);
+}
