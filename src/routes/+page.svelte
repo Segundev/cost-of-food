@@ -3,19 +3,25 @@
 
 	import Article from '../components/Article.svelte';
 	import Header from '../components/Header.svelte';
+	import Footer from '../components/Footer.svelte';
+	import Navbar from '../components/Navbar.svelte';
 </script>
 
 <div class="page-wrapper">
-	<Header />
-	<main>
-		<Article />
-	</main>
+	<Navbar />
+	<div class="main-wrapper">
+		<Header />
+		<main>
+			<Article />
+		</main>
+	</div>
+	<Footer />
 </div>
 
 <style>
-	.page-wrapper {
-		width: 95%;
-		max-width: 750px;
+	.main-wrapper {
+		width: 98%;
+		max-width: 850px;
 		margin: 0 auto;
 		overflow-x: hidden;
 	}

@@ -14,16 +14,19 @@
 	</p>
 	<p>
 		When examining the data provided by the National Bureau of Statistics concerning our consumption
-		patterns in 2019, we consumed less homemade food. Approximately 20 percent of our total food
-		expenditure was allocated to meals consumed outside the home. Even dedicating more time to
-		cooking at home or opting for nearby restaurants does not shield individuals from the escalating
-		trend in food prices. Over the past year, food prices have witnessed a significant doubling, and
-		as of November, food inflation stands at 31.52 percent, marking the highest rate since 1996.
+		patterns in 2019, we consumed less homemade food. <span
+			>Approximately 20 percent of our total food expenditure</span
+		>
+		was allocated to meals consumed outside the home. Even dedicating more time to cooking at home or
+		opting for nearby restaurants does not shield individuals from the escalating trend in food prices.
+		Over the past year, food prices have witnessed a significant doubling, and as of November,
+		<span>food inflation stands at 31.52 percent</span>, marking the highest rate since
+		<span>1996.</span>
 	</p>
 </section>
 
 <section>
-	<SubHeader>Christmas is expensive</SubHeader>
+	<SubHeader id={1}>Christmas is expensive</SubHeader>
 	<p>
 		Mr. Dayo, an estate manager who is a family man with a wife and son, celebrated his third
 		Christmas with his new family. During our discussion, he emphasized the importance of
@@ -36,10 +39,10 @@
 	<p>
 		He pointed out that the decision largely hinges on the cost of each item. In a comparative
 		analysis with the previous year, the cost of frozen chicken has witnessed a substantial
-		increase. While a kilogram of frozen chicken was priced at ₦1500 in the past, it is currently
-		being retailed for ₦3000. Furthermore, a three- to four-month-old chicken is now commanding a
-		price range of ₦7500 to ₦10,000. Common practice now is to see households rear their chickens
-		close to any major festive period.
+		increase. While a kilogram of frozen chicken was priced at <span>₦1500</span> in the past, it is
+		currently being retailed for <span>₦3000</span>. Furthermore, a three- to four-month-old chicken
+		is now commanding a price range of <span> ₦7500 to ₦10,000</span>. Common practice now is to see
+		households rear their chickens close to any major festive period.
 	</p>
 	<p>
 		With everyone trying to be economical and cut costs, the reality of things pushing individuals
@@ -49,13 +52,13 @@
 </section>
 
 <section>
-	<SubHeader>Cost of farming has increased</SubHeader>
+	<SubHeader id={2}>Cost of farming has increased</SubHeader>
 	<p>
 		Let’s dive a bit into poultry farming. The primary driver of the increase in the price of
 		poultry meat is the escalating cost of raising these birds. In January, a kilogram of poultry
-		feed was retailed at ₦400, but it is currently being sold for ₦800, with a 25-kilogram bag
-		commanding a price of ₦14,000. Conducting a cost analysis reveals that the 25-kilogram bag can
-		sustain less than three birds until full maturity.
+		feed was retailed at <span>₦400</span>, but it is currently being sold for <span>₦800</span>,
+		with a 25-kilogram bag commanding a price of <span>₦14,000</span>. Conducting a cost analysis
+		reveals that the 25-kilogram bag can sustain less than three birds until full maturity.
 	</p>
 	<Chart chartName={chartData[9].chartName} altText={chartData[9].altText}
 		>Chart showing the prices of meat between 2017 and 2023</Chart
@@ -63,12 +66,12 @@
 	<p>
 		Majority of the components used in feed production can be sourced locally. Maize, soybean,
 		wheat, rice bran, and limestone are all cultivated across the country. Nigeria is the
-		second-largest producer of maize in Africa and the 14th-largest globally. While maize is
-		extensively grown across the nation, the primary production centers are in Borno, Niger,
-		Plateau, Katsina, Gombe, Bauchi, Kogi, Kaduna, Oyo, and Taraba states. These top ten
-		maize-producing states account for nearly two-thirds (64%) of the total maize production in
-		Nigeria. Despite the substantial local production, the demand for maize still surpasses the
-		supply, resulting in an annual demand gap of approximately 4 million metric tons.
+		<span>second-largest producer</span> of maize in Africa and the 14th-largest globally. While maize
+		is extensively grown across the nation, the primary production centers are in Borno, Niger, Plateau,
+		Katsina, Gombe, Bauchi, Kogi, Kaduna, Oyo, and Taraba states. These top ten maize-producing states
+		account for nearly two-thirds (64%) of the total maize production in Nigeria. Despite the substantial
+		local production, the demand for maize still surpasses the supply, resulting in an annual demand
+		gap of approximately 4 million metric tons.
 	</p>
 	<p>
 		If major materials can be sourced within the country, what might be the cause of the current
@@ -88,7 +91,7 @@
 	</p>
 </section>
 <section>
-	<SubHeader>Diesel a major reason why food is expensive</SubHeader>
+	<SubHeader id={3}>Diesel a major reason why food is expensive</SubHeader>
 	<p>
 		Nigeria is confronted with a multifaceted energy challenge. Electricity, which should be the
 		primary power source, is notably absent. We won’t dwell more on this issue but shift our focus
@@ -124,7 +127,7 @@
 	>
 </section>
 <section>
-	<SubHeader>Border Closure and Exchange Rate and its negative effect</SubHeader>
+	<SubHeader id={4}>Border Closure and Exchange Rate and its negative effect</SubHeader>
 	<p>
 		Some economic policies, aimed at protecting local industries and promoting domestic production,
 		have contributed to the rise in food costs. The prohibition on importing certain items and the
@@ -148,7 +151,7 @@
 	</p>
 </section>
 <section>
-	<SubHeader>Other foods items are expensive too</SubHeader>
+	<SubHeader id={5}>Other foods items are expensive too</SubHeader>
 	<p>
 		The same issue elucidated in the feeds and poultry analogy, as explained above, resonates with
 		other food and non-food items. Staple food items, extensively consumed by Nigerians, have
@@ -177,7 +180,7 @@
 	</p>
 </section>
 <section>
-	<SubHeader>How would households cope?</SubHeader>
+	<SubHeader id={6}>How would households cope?</SubHeader>
 	<p>
 		Nigerians collectively spent ₦22 trillion on food expenditures, with 56 percent of the country's
 		total expenditure allocated to food. Breaking down food expenditure on a per capita basis, the
@@ -208,3 +211,10 @@
 		future—this is our resilience.
 	</p>
 </section>
+
+<style>
+	span {
+		font-weight: bold;
+		color: var(--red);
+	}
+</style>

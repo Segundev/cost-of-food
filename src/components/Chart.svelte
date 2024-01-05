@@ -29,7 +29,7 @@
 
 	@media (min-width: 550px) {
 		img.responsive {
-			width: 100%;
+			width: 65%;
 			max-width: 100%;
 		}
 	}

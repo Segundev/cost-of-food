@@ -25,6 +25,7 @@
 
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -95,4 +96,11 @@ h5 {
 small,
 .text_small {
 	font-size: var(--h6);
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	box-shadow: none;
 }
