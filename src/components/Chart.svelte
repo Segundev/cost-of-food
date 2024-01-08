@@ -11,7 +11,6 @@
 <style>
 	figure {
 		margin: 0;
-		margin-left: 1.875rem;
 		text-align: center;
 	}
 
@@ -23,7 +22,7 @@
 
 	figcaption {
 		font-size: 12px;
-		margin: -5px;
+		margin-top: -1.2rem;
 		color: #ddf3d2;
 	}
 

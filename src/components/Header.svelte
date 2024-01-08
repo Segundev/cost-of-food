@@ -15,4 +15,10 @@
 		color: var(--amber);
 		margin-top: 1.5rem;
 	}
+
+	@media (min-width: 700px) {
+		h1 {
+			font-size: 3.5rem;
+		}
+	}
 </style>

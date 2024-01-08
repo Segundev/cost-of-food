@@ -9,6 +9,16 @@
 	let isNavShowing = false;
 </script>
 
+<svelte:head>
+	{#if isNavShowing}
+		<style>
+			body {
+				overflow: hidden;
+			}
+		</style>
+	{/if}
+</svelte:head>
+
 <nav>
 	<div class="nav-wrapper">
 		<a href="/">Orodata</a>
@@ -35,6 +45,7 @@
 <style>
 	nav {
 		position: fixed;
+		top: 0;
 		width: 100%;
 		background: #fffbf5;
 		height: 2.875rem;
@@ -58,7 +69,7 @@
 		background: #1c3013;
 		border-left: 4px solid #dea755;
 		top: -10px;
-		z-index: 999;
+		z-index: 10;
 	}
 
 	.modal > div {

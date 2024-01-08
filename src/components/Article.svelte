@@ -2,39 +2,39 @@
 	import Chart from './Chart.svelte';
 	import { chartData } from '../lib/chartType';
 	import SubHeader from './subHeader.svelte';
+	import OilScroll from './OilScroll.svelte';
+	import PriceScroll from './PriceScroll.svelte';
 </script>
 
 <section>
 	<p>
-		As the year comes to an end, it is marked by widespread celebrations, and one popular avenue for
-		celebrating is through the enjoyment of well-prepared homemade food. The Christian community
-		celebrated Christmas with the customary inclusion of chicken, a ritual observed on the 25th.
-		Meanwhile, a common holiday custom involves families going on trips and getting together with
-		family members. But as we all know, it costs a lot to be outside.
+		The end of the year is marked with different celebrations. From Christmas celebrations to end of
+		the year parties, one thing is certain, it is a time to enjoy homemade food with family, friends
+		or even colleagues from work. In Nigeria during celebrations like this, you can always bet on
+		eating as much chicken as you possibly can. When examining the data provided by the National
+		Bureau of Statistics concerning our consumption patterns in 2019, we consumed less homemade
+		food. <span>Approximately 20 percent of our total food expenditure</span> was allocated to meals
+		consumed outside the home.
 	</p>
 	<p>
-		When examining the data provided by the National Bureau of Statistics concerning our consumption
-		patterns in 2019, we consumed less homemade food. <span
-			>Approximately 20 percent of our total food expenditure</span
-		>
-		was allocated to meals consumed outside the home. Even dedicating more time to cooking at home or
-		opting for nearby restaurants does not shield individuals from the escalating trend in food prices.
-		Over the past year, food prices have witnessed a significant doubling, and as of November,
+		With the current price of food items now, dedicating more time to cooking at home or opting for
+		nearby restaurants does not shield individuals from the escalating trend in food prices. Over
+		the past year, food prices have witnessed a significant doubling, and as of November,
 		<span>food inflation stands at 31.52 percent</span>, marking the highest rate since
 		<span>1996.</span>
 	</p>
 </section>
 
 <section>
-	<SubHeader id={1}>Christmas is expensive</SubHeader>
+	<SubHeader id={1}>Christmas was expensive</SubHeader>
 	<p>
-		Mr. Dayo, an estate manager who is a family man with a wife and son, celebrated his third
+		Mr. Kunle, an estate manager who is a family man with a wife and son, celebrated his third
 		Christmas with his new family. During our discussion, he emphasized the importance of
 		reevaluating the choice between purchasing a live chicken or opting for the more economical
 		alternative of frozen chicken.
 	</p>
-	<Chart chartName={chartData[5].chartName} altText={chartData[5].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
+	<Chart chartName={chartData[0].chartName} altText={chartData[0].altText}
+		>Chart showing the prices of both beef and poultry meat between 2017 and 2023</Chart
 	>
 	<p>
 		He pointed out that the decision largely hinges on the cost of each item. In a comparative
@@ -61,7 +61,7 @@
 		reveals that the 25-kilogram bag can sustain less than three birds until full maturity.
 	</p>
 	<Chart chartName={chartData[9].chartName} altText={chartData[9].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
+		>Chart showing Price of Poultry feeds per kg and a 25kg bag</Chart
 	>
 	<p>
 		Majority of the components used in feed production can be sourced locally. Maize, soybean,
@@ -83,15 +83,15 @@
 		clarified that he obtains all his supplies within the state and has consistently maintained an
 		uninterrupted flow. However, on certain occasions, he has resorted to ordering maize from Kano.
 	</p>
+</section>
+<section>
+	<SubHeader id={3}>Diesel a major reason why food is expensive</SubHeader>
 	<p>
-		He emphasized how the surge in diesel prices directly impacts the cost of poultry feed. Diesel
+		Tobi emphasized how the surge in diesel prices directly impacts the cost of poultry feed. Diesel
 		is primarily used to fuel the majority of trucks and buses involved in transporting goods from
 		the North. Additionally, the machines used in the production of these feeds are powered by
 		diesel.
 	</p>
-</section>
-<section>
-	<SubHeader id={3}>Diesel a major reason why food is expensive</SubHeader>
 	<p>
 		Nigeria is confronted with a multifaceted energy challenge. Electricity, which should be the
 		primary power source, is notably absent. We won’t dwell more on this issue but shift our focus
@@ -99,10 +99,11 @@
 	</p>
 	<p>
 		As a major producer of crude oil, our economic realities differ from the anticipated benefits of
-		being the third-largest oil-producing country in Africa. Despite exporting crude oil, we find
-		ourselves importing refined products, a situation expected to be addressed by the Dangote
-		Refinery and the recently renovated Port Harcourt Refinery.
+		being the <span>third-largest oil-producing</span> third-largest oil-producing country in Africa.
+		Despite exporting crude oil, we find ourselves importing refined products, a situation expected to
+		be addressed by the Dangote Refinery and the recently renovated Port Harcourt Refinery.
 	</p>
+	<OilScroll />
 	<p>
 		Global events such as the conflict between Russia and Ukraine, it was expected that the demand
 		shortage from Russia would be compensated by other oil-producing countries. However, in recent
@@ -110,9 +111,6 @@
 		barrels per day quota allocated by OPEC and significantly below the 1.69 million barrels per day
 		assumed in the 2023 budget. A major contributing factor is vandalism and theft.
 	</p>
-	<Chart chartName={chartData[3].chartName} altText={chartData[3].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
-	>
 	<p>
 		As mentioned earlier, we both produce and import refined products, including PMS, diesel, jet
 		fuel, and even cooking gas, with at least 50 percent of our consumption being imported. Prior to
@@ -122,9 +120,7 @@
 		burden. Consequently, prices surged, with PMS averaging ₦200 in November last year and now
 		selling for ₦650, while diesel, previously at ₦810, has risen to ₦1060.
 	</p>
-	<Chart chartName={chartData[2].chartName} altText={chartData[2].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
-	>
+	<PriceScroll />
 </section>
 <section>
 	<SubHeader id={4}>Border Closure and Exchange Rate and its negative effect</SubHeader>
@@ -143,7 +139,7 @@
 		multi-window regime to be costly, prompting the adoption of the new policy.
 	</p>
 	<Chart chartName={chartData[5].chartName} altText={chartData[5].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
+		>Chart showing the exchange rate between the Naira and Dollar</Chart
 	>
 	<p>
 		However, the persisting challenge lies in the fact that low forex earnings have not been able to
@@ -159,7 +155,7 @@
 		₦12,000 in 2016, now commands a staggering ₦55,000.
 	</p>
 	<Chart chartName={chartData[7].chartName} altText={chartData[7].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
+		>Infographics showing the prices of other food items</Chart
 	>
 	<p>
 		Similarly, alternatives to poultry meat, such as beef and fish, have also seen significant
@@ -201,14 +197,15 @@
 		rate, it is approximately ₦67,000.
 	</p>
 	<Chart chartName={chartData[1].chartName} altText={chartData[1].altText}
-		>Chart showing the prices of meat between 2017 and 2023</Chart
+		>Chart showing various medium Nigerians use as a coping mechanism when faced with food
+		insecurity</Chart
 	>
 	<p>
-		Data from 2019 reveals that when confronted with food insecurity, a majority of households lack
-		effective coping mechanisms. Savings are the least relied upon, with households either
-		maintaining the status quo and hoping for the best, reducing food consumption, or seeking
-		assistance from friends and family. Nigerians remain optimistic, clinging to hope for a better
-		future—this is our resilience.
+		Data from Nigeria living standard survey 2019 reveals that when confronted with food insecurity,
+		a majority of households lack effective coping mechanisms. Savings are the least relied upon,
+		with households either maintaining the status quo and hoping for the best, reducing food
+		consumption, or seeking assistance from friends and family. Nigerians remain optimistic,
+		clinging to hope for a better future—this is our resilience.
 	</p>
 </section>
 
