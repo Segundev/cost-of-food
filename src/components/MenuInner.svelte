@@ -2,7 +2,7 @@
 	import SubHeader from './subHeader.svelte';
 </script>
 
-<aside>
+<div class="aside-container">
 	<div class="inner-wrapper">
 		<a href="#1"
 			><SubHeader fontSize={'1.3rem'} borderBottom={'3px solid #FFD79B'}
@@ -35,13 +35,13 @@
 			></a
 		>
 	</div>
-</aside>
+</div>
 
 <style>
-	aside {
-		height: 100dvh;
+	.aside-container {
 		overflow: hidden;
 	}
+
 	.inner-wrapper {
 		display: flex;
 		flex-direction: column;

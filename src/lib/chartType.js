@@ -17,7 +17,7 @@ export const chartData = [
 		altText: 'Line chart Nigeria monthly oil production'
 	},
 	{
-		chartName: 'Oil-Prices.png',
+		chartName: 'oil-Prices.png',
 		altText: 'Line chart showing Global monthly oil price'
 	},
 	{

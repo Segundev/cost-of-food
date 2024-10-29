@@ -22,7 +22,6 @@
 		</div>
 		<div class="footer-logo">
 			<p>Produced by</p>
-			<img src="orodata-logo.png" alt="Logo of Orodata Science" />
 		</div>
 		<div class="socials-wrapper">
 			<ul class="links">

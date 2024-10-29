@@ -18,8 +18,8 @@
 
 <div class="page-wrapper">
 	<Navbar />
+	<Header />
 	<div class="main-wrapper">
-		<Header />
 		<main>
 			<Article />
 		</main>

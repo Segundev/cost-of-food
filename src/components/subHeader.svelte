@@ -1,6 +1,6 @@
 <script>
 	export let id;
-	export let fontSize = '1.2rem';
+	export let fontSize = '1rem';
 	export let borderBottom = 'none';
 </script>
 
@@ -13,7 +13,7 @@
 			#
 		</div>
 	</div>
-	<h2 class="text" style="font-size: {fontSize};"><slot /></h2>
+	<h2 class="text"><slot /></h2>
 </div>
 
 <style>
@@ -47,6 +47,7 @@
 	}
 
 	.text {
+		font-size: 1em;
 		font-weight: bold;
 		word-wrap: break-word;
 		margin: 0;

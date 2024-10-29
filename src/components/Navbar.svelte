@@ -3,9 +3,6 @@
 	import Close from '../lib/Icons/Close.svelte';
 	import MenuInner from './MenuInner.svelte';
 
-	import { slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-
 	let isNavShowing = false;
 </script>
 
@@ -21,26 +18,29 @@
 
 <nav>
 	<div class="nav-wrapper">
-		<a href="/">Orodata</a>
 		<div class="icons">
-			{#if !isNavShowing}
-				<button on:click={() => (isNavShowing = !isNavShowing)}><Menu /></button>
-			{:else}
-				<div
-					transition:slide={{ delay: 250, duration: 1000, easing: quintOut, axis: 'x' }}
-					class="modal"
-				>
-					<div>
-						<div class="close-button">
-							<button on:click={() => (isNavShowing = !isNavShowing)}><Close /></button>
-						</div>
-						<MenuInner />
-					</div>
-				</div>
-			{/if}
+			<button on:click={() => (isNavShowing = !isNavShowing)}>
+				{#if !isNavShowing}
+					<Menu />
+				{:else}
+					<Close />
+				{/if}
+			</button>
 		</div>
 	</div>
 </nav>
+
+<!-- The aside menu -->
+<aside class:active={isNavShowing}>
+	<div class="modal-content">
+		<div class="asideMenu">
+			<MenuInner />
+		</div>
+	</div>
+</aside>
+
+<!-- Overlay -->
+<div class="overlay" class:active={isNavShowing} on:click={() => (isNavShowing = false)} />
 
 <style>
 	nav {
@@ -55,7 +55,7 @@
 
 	.nav-wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 0 1.5rem;
 	}
 
@@ -63,40 +63,61 @@
 		padding-top: 4px;
 	}
 
-	.modal {
+	/* Aside styles */
+	aside {
 		position: fixed;
-		right: 0%;
+		top: 0;
+		right: -100%; /* Start off-screen */
+		height: 100vh;
+		width: 100%; /* Adjust width as needed */
 		background: #1c3013;
 		border-left: 4px solid #dea755;
-		top: -10px;
-		z-index: 10;
+		z-index: 10000;
+		transition: right 0.3s ease-in-out; /* Smooth transition */
+
+		@media (min-width: 650px) {
+			width: 50%;
+		}
 	}
 
-	.modal > div {
-		margin: 1rem;
+	aside.active {
+		right: 0; /* Slide in */
 	}
 
-	a {
-		background-image: url('orodata-nav-logo.png');
-		background-position: 95% 75%;
-		padding-right: 2rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: #484848;
-		background-repeat: no-repeat;
-		background-size: auto 70%;
-		display: flex;
-		align-items: center;
-		max-width: max-content;
+	.modal-content {
+		padding: 1rem;
 		height: 100%;
-		padding-top: 8px;
-		font-size: 1.2rem;
-		font-weight: bold;
-		text-decoration: none;
-		cursor: pointer;
 	}
 
-	.close-button button {
-		float: right;
+	/* Overlay styles */
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease-in-out;
+		z-index: 9999;
+	}
+
+	.overlay.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* Button styles */
+	button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.asideMenu {
+		height: 100%;
+		/* overflow-y: auto; */
 	}
 </style>

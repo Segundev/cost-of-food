@@ -6,7 +6,11 @@
 
 <style>
 	header {
-		margin: 3.75rem;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 3.75rem 3rem;
 		text-align: center;
 	}
 
